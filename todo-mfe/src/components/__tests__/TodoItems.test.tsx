@@ -1,4 +1,3 @@
-import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react';
 import TodoItems from '../TodoItems'
 
@@ -36,9 +35,8 @@ describe('TodoItems', () => {
 
     expect(baseElement).toBeTruthy();
     expect(updateItem).not.toHaveBeenCalled();
-    const check = screen.getByTestId('check-1234567');
+    const check = screen.getByTestId('check-SOD - Interview');
     fireEvent.click(check)
     expect(updateItem).toHaveBeenCalled();
-    console.log(check)
   })
 })

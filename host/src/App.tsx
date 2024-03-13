@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom/client'
 import TodosView from 'todos/TodosView'
 
 import './index.css'
+import { defaultData } from './mocks/defaultData'
 
 const App = () => (
   <div className="container">
-    <TodosView title='TODO List' />
+    <h2 style={{ marginBottom: '1rem' }}>TODO List</h2>
+    <TodosView defaultData={defaultData} />
   </div>
 )
 const rootElement = document.getElementById('app')

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import type TodoItemType from '../model/TodoItem';
 import TodoItem from './TodoItem';
 
-interface TodoItemsProps {
+interface Props {
   items: TodoItemType[],
   updateItem: (item:TodoItemType) => void
 }
@@ -14,9 +14,9 @@ const ListContainer = styled.div`
   margin: 0;
 `
 
-const TodoItems: React.FC<TodoItemsProps> = ({ items, updateItem }) => {
+const TodoItems: React.FC<Props> = ({ items, updateItem }) => {
   return <>
-    {items?.map(item => (
+    {items.map(item => (
       <ListContainer key={item.id}>
         <TodoItem item={item} key={item.id} updateItem={updateItem} />
       </ListContainer>
